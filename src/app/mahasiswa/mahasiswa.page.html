@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Data Mahasiswa</ion-title>
+    <ion-title>Katalog Mainan Andy</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,18 +8,18 @@
   <!-- Header tambahan saat content di-collapse -->
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Data Mahasiswa</ion-title>
+      <ion-title size="large">Katalog Mainan Andy</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <!-- Tombol Tambah Mahasiswa -->
+  <!-- Tombol Tambah Mainan -->
   <ion-card>
     <ion-button expand="block" (click)="openModalTambah(true)">
-      Tambah Mahasiswa
+      Tambah Mainan dan Cerita
     </ion-button>
   </ion-card>
 
-  <!-- Modal Tambah Mahasiswa -->
+  <!-- Modal Tambah Mainan -->
   <ion-modal [isOpen]="modalTambah">
     <ng-template>
       <ion-header>
@@ -27,27 +27,27 @@
           <ion-buttons slot="start">
             <ion-button (click)="cancel()">Batal</ion-button>
           </ion-buttons>
-          <ion-title>Tambah Mahasiswa</ion-title>
+          <ion-title>Tambah Mainan dan Cerita</ion-title>
         </ion-toolbar>
       </ion-header>
       <ion-content class="ion-padding">
         <ion-item>
           <ion-input
-            label="Nama Mahasiswa"
+            label="Nama Mainan"
             labelPlacement="floating"
             required
             [(ngModel)]="nama"
-            placeholder="Masukkan Nama Mahasiswa"
+            placeholder="Masukkan Nama Mainan"
             type="text"
           ></ion-input>
         </ion-item>
         <ion-item>
           <ion-input
-            label="Jurusan Mahasiswa"
+            label="Cerita"
             labelPlacement="floating"
             required
             [(ngModel)]="jurusan"
-            placeholder="Masukkan Jurusan Mahasiswa"
+            placeholder="Masukkan Cerita"
             type="text"
           ></ion-input>
         </ion-item>
@@ -59,7 +59,7 @@
               color="primary"
               expand="block"
             >
-              Tambah Mahasiswa
+              Tambah Mainan
             </ion-button>
           </ion-col>
         </ion-row>
@@ -75,27 +75,27 @@
           <ion-buttons slot="start">
             <ion-button (click)="cancel()">Batal</ion-button>
           </ion-buttons>
-          <ion-title>Edit Mahasiswa</ion-title>
+          <ion-title>Edit Mainan</ion-title>
         </ion-toolbar>
       </ion-header>
       <ion-content class="ion-padding">
         <ion-item>
           <ion-input
-            label="Nama Mahasiswa"
+            label="Nama Mainan"
             labelPlacement="floating"
             required
             [(ngModel)]="nama"
-            placeholder="Masukkan Nama Mahasiswa"
+            placeholder="Masukkan Nama Mainan"
             type="text"
           ></ion-input>
         </ion-item>
         <ion-item>
           <ion-input
-            label="Jurusan Mahasiswa"
+            label="Cerita"
             labelPlacement="floating"
             required
             [(ngModel)]="jurusan"
-            placeholder="Masukkan Jurusan Mahasiswa"
+            placeholder="Masukkan Cerita"
             type="text"
           ></ion-input>
         </ion-item>
@@ -131,4 +131,8 @@
       </ion-button>
     </ion-item>
   </ion-card>
+  <ion-item (click)="logout()">
+    <ion-icon slot="start" ios="exit-outline" md="exit-sharp"></ion-icon>
+    <ion-label>Logout</ion-label>
+  </ion-item>
 </ion-content>
